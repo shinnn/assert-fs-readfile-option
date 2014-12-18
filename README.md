@@ -1,10 +1,10 @@
 # assert-fs-readfile-option 
 
-[![NPM version](https://badge.fury.io/js/assert-fs-readfile-option.svg)](http://badge.fury.io/js/assert-fs-readfile-option)
-[![Build Status](https://travis-ci.org/shinnn/assert-fs-readfile-option.svg?branch=master)](https://travis-ci.org/shinnn/assert-fs-readfile-option)
+[![NPM version](https://img.shields.io/npm/v/assert-fs-readfile-option.svg?style=flat)](https://www.npmjs.com/package/assert-fs-readfile-option)
+[![Build Status](https://img.shields.io/travis/shinnn/assert-fs-readfile-option.svg?style=flat)](https://travis-ci.org/shinnn/assert-fs-readfile-option)
 [![Build status](https://ci.appveyor.com/api/projects/status/uq0hb488srr6n51i?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/assert-fs-readfile-option)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/assert-fs-readfile-option.svg)](https://coveralls.io/r/shinnn/assert-fs-readfile-option)
-[![devDependency Status](https://david-dm.org/shinnn/assert-fs-readfile-option/dev-status.svg)](https://david-dm.org/shinnn/assert-fs-readfile-option#info=devDependencies)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/assert-fs-readfile-option.svg?style=flat)](https://coveralls.io/r/shinnn/assert-fs-readfile-option)
+[![devDependency Status](https://david-dm.org/shinnn/assert-fs-readfile-option/dev-status.svg?style=flat)](https://david-dm.org/shinnn/assert-fs-readfile-option#info=devDependencies)
 
 Test if value is valid for [fs.readFile] options
 
@@ -22,9 +22,9 @@ assertFsReadFileOption(); // doesn't throw
 
 ## Installation
 
-[Use npm.](https://www.npmjs.org/doc/cli/npm-install.html)
+[Use npm.](https://docs.npmjs.com/cli/install)
 
-```
+```sh
 npm install assert-fs-readfile-option
 ```
 
@@ -34,7 +34,7 @@ npm install assert-fs-readfile-option
 var assertFsReadFileOption = require('assert-fs-readfile-option');
 ```
 
-### assertFsReadFileOption(*maybeOption*)
+### assertFsReadFileOption([*maybeOption*])
 
 *maybeOption*: any types
 
