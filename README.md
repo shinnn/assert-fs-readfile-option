@@ -42,8 +42,6 @@ It throws an error when the argument is not a valid value for [fs.readFile] opti
 
 ## License
 
-Copyright (c) 2014 [Shinnosuke Watanabe](https://github.com/shinnn)
+[The Unlicense](./LICENSE)
 
-Licensed under [the MIT License](./LICENSE).
-
-[fs.readFile]: http://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback
+[fs.readFile]: https://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback
