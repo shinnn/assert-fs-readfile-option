@@ -3,25 +3,16 @@
   "version": "1.0.0",
   "description": "Test if value is valid for fs.readFile option",
   "repository": "shinnn/assert-fs-readfile-option",
-  "author": {
-    "name": "Shinnosuke Watanabe",
-    "url": "https://github.com/shinnn"
-  },
+  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
-    "pretest": "jscs *.js && eslint *.js",
+    "pretest": "eslint --config node_modules/@shinnn/eslintrc-node/rc.json index.js test.js",
     "test": "node test.js",
     "coverage": "istanbul cover test.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/shinnn/assert-fs-readfile-option/blob/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "files": [
-    "index.js",
-    "LICENSE"
+    "index.js"
   ],
   "keywords": [
     "fs",
@@ -37,14 +28,10 @@
     "nop": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^0.10.2",
-    "istanbul": "^0.3.5",
-    "istanbul-coveralls": "^1.0.1",
-    "jscs": "^1.8.1",
-    "tape": "^3.0.3"
-  },
-  "jscsConfig": {
-    "preset": "google",
-    "validateLineBreaks": "LF"
+    "@shinnn/eslintrc-node": "^1.0.2",
+    "eslint": "^0.23.0",
+    "istanbul": "^0.3.16",
+    "istanbul-coveralls": "^1.0.3",
+    "tape": "^4.0.0"
   }
 }
