@@ -1,37 +1,44 @@
 {
-  "name": "assert-fs-readfile-option",
-  "version": "1.0.0",
-  "description": "Test if value is valid for fs.readFile option",
-  "repository": "shinnn/assert-fs-readfile-option",
-  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
-  "scripts": {
-    "pretest": "eslint --config node_modules/@shinnn/eslintrc-node/rc.json index.js test.js",
-    "test": "node test.js",
-    "coverage": "istanbul cover test.js",
-    "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
-  },
-  "license": "ISC",
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "fs",
-    "test",
-    "assert",
-    "assertion",
-    "option",
-    "flag",
-    "encoding",
-    "value"
-  ],
-  "dependencies": {
-    "nop": "^1.0.0"
-  },
-  "devDependencies": {
-    "@shinnn/eslintrc-node": "^1.0.2",
-    "eslint": "^0.23.0",
-    "istanbul": "^0.3.16",
-    "istanbul-coveralls": "^1.0.3",
-    "tape": "^4.0.0"
-  }
+	"name": "assert-fs-readfile-option",
+	"version": "1.0.0",
+	"description": "Test if value is valid for fs.readFile option",
+	"repository": "shinnn/assert-fs-readfile-option",
+	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
+	"scripts": {
+		"pretest": "eslint --fix --format=codeframe index.js test.js",
+		"test": "nyc --reporter=text --reporter=html node test.js"
+	},
+	"license": "ISC",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"fs",
+		"test",
+		"assert",
+		"assertion",
+		"validate",
+		"validation",
+		"invalidate",
+		"invalidation",
+		"option",
+		"flag",
+		"encoding",
+		"value"
+	],
+	"dependencies": {
+		"nop": "^1.0.0"
+	},
+	"devDependencies": {
+		"@shinnn/eslint-config-node": "^5.0.0",
+		"eslint": "^4.13.1",
+		"nyc": "^11.3.0",
+		"tape": "^4.8.0"
+	},
+	"eslintConfig": {
+		"extends": "@shinnn/node",
+		"rules": {
+			"no-var": "off"
+		}
+	}
 }

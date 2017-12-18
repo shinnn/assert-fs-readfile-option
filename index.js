@@ -1,9 +1,9 @@
 'use strict';
 
-var fs = require('fs');
+var readFile = require('fs').readFile;
 
 var noop = require('nop');
 
 module.exports = function assertFsReadFileOption(val) {
-  fs.readFile('', val, noop);
+	readFile('', val, noop);
 };
