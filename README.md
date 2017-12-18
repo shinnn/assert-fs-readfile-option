@@ -1,28 +1,33 @@
-# assert-fs-readfile-option 
+# assert-fs-readfile-option
 
-[![NPM version](https://img.shields.io/npm/v/assert-fs-readfile-option.svg)](https://www.npmjs.com/package/assert-fs-readfile-option)
-[![Build Status](https://img.shields.io/travis/shinnn/assert-fs-readfile-option.svg)](https://travis-ci.org/shinnn/assert-fs-readfile-option)
-[![Build status](https://ci.appveyor.com/api/projects/status/uq0hb488srr6n51i?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/assert-fs-readfile-option)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/assert-fs-readfile-option.svg)](https://coveralls.io/r/shinnn/assert-fs-readfile-option)
-[![devDependency Status](https://david-dm.org/shinnn/assert-fs-readfile-option/dev-status.svg)](https://david-dm.org/shinnn/assert-fs-readfile-option#info=devDependencies)
+[![npm version](https://img.shields.io/npm/v/assert-fs-readfile-option.svg)](https://www.npmjs.com/package/assert-fs-readfile-option)
+[![Build Status](https://travis-ci.org/shinnn/assert-fs-readfile-option.svg?branch=master)](https://travis-ci.org/shinnn/assert-fs-readfile-option)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/assert-fs-readfile-option.svg)](https://coveralls.io/github/shinnn/assert-fs-readfile-option?branch=master)
 
-Test if value is valid for [fs.readFile] options
+Test if a value is valid for [fs.readFile] options
 
 ```javascript
 const assertFsReadFileOption = require('assert-fs-readfile-option');
 
-assertFsReadFileOption({encoding: 'utf8', flag: 'r'}); // doesn't throw
-assertFsReadFileOption({flag: 'foo'}); // Error: Unknown file open flag: sd
+assertFsReadFileOption({encoding: 'utf8', flag: 'r'});
+// doesn't throw
 
-assertFsReadFileOption('base64'); // doesn't throw
-assertFsReadFileOption('base65'); // Error: Unknown encoding: base65
+assertFsReadFileOption({flag: 'foo'});
+// throws `TypeError [ERR_INVALID_OPT_VALUE]: The value "foo" is invalid for option "flags"`
 
-assertFsReadFileOption(); // doesn't throw
+assertFsReadFileOption('base64');
+// doesn't throw
+
+assertFsReadFileOption('base65');
+// throws `TypeError [ERR_INVALID_OPT_VALUE_ENCODING]: The value "base65" is invalid for option "encoding"`
+
+assertFsReadFileOption();
+// doesn't throw
 ```
 
 ## Installation
 
-[Use npm.](https://docs.npmjs.com/cli/install)
+[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/getting-started/what-is-npm).
 
 ```
 npm install assert-fs-readfile-option
@@ -42,6 +47,6 @@ It throws an error when the argument is not a valid value for [fs.readFile] opti
 
 ## License
 
-[The Unlicense](./LICENSE)
+[ISC License](./LICENSE) © 2017 Shinnosuke Watanabe
 
-[fs.readFile]: https://nodejs.org/api/fs.html#fs_fs_readfile_filename_options_callback
+[fs.readFile]: https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback
