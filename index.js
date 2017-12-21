@@ -1,6 +1,6 @@
 'use strict';
 
-const readFile = require('fs').readFile;
+const {readFile} = require('fs');
 
 const noop = require('nop');
 
