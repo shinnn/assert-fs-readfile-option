@@ -1,6 +1,6 @@
 {
 	"name": "assert-fs-readfile-option",
-	"version": "1.0.1",
+	"version": "2.0.0-0",
 	"description": "Test if value is valid for fs.readFile option",
 	"repository": "shinnn/assert-fs-readfile-option",
 	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
