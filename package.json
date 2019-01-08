@@ -2,13 +2,13 @@
 	"name": "assert-fs-readfile-option",
 	"version": "2.0.0-0",
 	"description": "Test if value is valid for fs.readFile option",
-	"repository": "shinnn/assert-fs-readfile-option",
 	"author": "Shinnosuke Watanabe (https://github.com/shinnn)",
-	"scripts": {
-		"pretest": "eslint --fix --format=codeframe index.js test.js",
-		"test": "nyc --reporter=text --reporter=html node test.js"
-	},
+	"repository": "shinnn/assert-fs-readfile-option",
 	"license": "ISC",
+	"scripts": {
+		"pretest": "eslint .",
+		"test": "node test.js"
+	},
 	"files": [
 		"index.js"
 	],
@@ -30,12 +30,11 @@
 		"nop": "^1.0.0"
 	},
 	"devDependencies": {
-		"@shinnn/eslint-config-node": "^5.0.0",
-		"eslint": "^4.13.1",
-		"nyc": "^11.3.0",
-		"tape": "^4.8.0"
+		"@shinnn/eslint-config": "^6.8.9",
+		"eslint": "^5.12.0",
+		"tape": "^4.9.2"
 	},
 	"eslintConfig": {
-		"extends": "@shinnn/node"
+		"extends": "@shinnn"
 	}
 }
